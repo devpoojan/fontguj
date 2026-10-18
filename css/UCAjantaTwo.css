@@ -1,0 +1,18 @@
+/* FontGuj - Alias for UC Ajanta Two */
+@font-face {
+  font-family: 'UCAjantaTwo';
+  src: url('https://fontguj.pages.dev/fonts/UCAjantaTwo-Bold.woff2') format('woff2'),
+       url('/fonts/UCAjantaTwo-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UC_AjantaTwo';
+  src: url('https://fontguj.pages.dev/fonts/UCAjantaTwo-Bold.woff2') format('woff2'),
+       url('/fonts/UCAjantaTwo-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

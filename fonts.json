@@ -1,0 +1,49 @@
+{
+  "name": "FontGuj - Gujarati Web Fonts",
+  "description": "Free, open-source Gujarati Unicode web font hosting platform powered by Cloudflare Pages",
+  "baseUrl": "https://fontguj.pages.dev",
+  "fonts": [
+    {
+      "id": "uc-ajantatwo",
+      "name": "UC Ajanta Two",
+      "family": "UC_AjantaTwo",
+      "aliases": [
+        "UCAjantaTwo",
+        "UC-AjantaTwo"
+      ],
+      "file": "/fonts/UCAjantaTwo-Bold.woff2",
+      "fileName": "UCAjantaTwo-Bold.woff2",
+      "language": "Gujarati",
+      "category": "Display",
+      "weight": 700,
+      "weightLabel": "Bold",
+      "style": "normal",
+      "public": true,
+      "downloadEnabled": false,
+      "designer": "UC Fonts",
+      "version": "1.0.0",
+      "fileSize": "188.8 KB",
+      "format": "woff2",
+      "description": "Bold, expressive Gujarati display typeface engineered for high-impact headlines, editorial titles, cultural celebrations, and modern branding.",
+      "supportedWeights": [
+        700
+      ],
+      "previewText": "જય સ્વામિનારાયણ",
+      "samplePhrases": [
+        "જય સ્વામિનારાયણ",
+        "ગુજરાતી ભાષા આપણી ઓળખ છે.",
+        "અક્ષર પુરુષોત્તમ મહારાજ",
+        "સ્વાગત છે આપનું",
+        "ક્ષ જ્ઞ શ્ર ત્ત દ્ધ ક્ર ગ્ર પ્ર",
+        "૧ ૨ ૩ ૪ ૫ ૬ ૭ ૮ ૯ ૦"
+      ],
+      "tags": [
+        "Display",
+        "Bold",
+        "Unicode",
+        "Headlines",
+        "OpenType"
+      ]
+    }
+  ]
+}

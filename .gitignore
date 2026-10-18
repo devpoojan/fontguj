@@ -1,0 +1,13 @@
+# Node dependencies
+node_modules/
+package-lock.json
+
+# Production ZIP bundles
+*.zip
+
+# System & Editor files
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/

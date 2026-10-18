@@ -1,0 +1,12 @@
+/* FontGuj - Gujarati Web Fonts CDN */
+/* Font: UC Ajanta Two (Bold) */
+/* CDN Source: https://fontguj.pages.dev */
+
+@font-face {
+  font-family: 'UC_AjantaTwo';
+  src: url('https://fontguj.pages.dev/fonts/UCAjantaTwo-Bold.woff2') format('woff2'),
+       url('/fonts/UCAjantaTwo-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

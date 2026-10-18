@@ -1,0 +1,5 @@
+# Cloudflare Pages Redirects
+/api/fonts       /fonts.json             200
+/api/fonts.json  /fonts.json             200
+/font/*          /fonts/:splat           301
+/css/UC-AjantaTwo.css /css/UC_AjantaTwo.css 301

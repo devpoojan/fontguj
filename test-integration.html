@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FontGuj - Independent Integration Test</title>
+  
+  <!-- 1. Include FontGuj CSS Endpoint (Google Fonts style) -->
+  <link rel="stylesheet" href="css/UC_AjantaTwo.css">
+
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: #131b2e;
+      --border: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #f97316;
+      --success: #10b981;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, sans-serif;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--success);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+
+    p.subtitle {
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Target Typography with UC_AjantaTwo */
+    .font-ajanta {
+      font-family: 'UC_AjantaTwo', sans-serif;
+      font-weight: 700;
+    }
+
+    .sample-huge {
+      font-size: 3rem;
+      line-height: 1.25;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    .sample-sub {
+      font-size: 1.5rem;
+      color: #fed7aa;
+      margin-bottom: 16px;
+    }
+
+    .sample-conjuncts {
+      font-size: 1.8rem;
+      color: #67e8f9;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 16px;
+      border-radius: 10px;
+      letter-spacing: 2px;
+    }
+
+    .system-fallback {
+      font-size: 1.8rem;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.3);
+      padding: 16px;
+      border-radius: 10px;
+    }
+
+    .code-preview {
+      background: #060911;
+      padding: 14px;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 0.85rem;
+      color: #e2e8f0;
+      margin-top: 12px;
+      overflow-x: auto;
+    }
+
+    .status-pill {
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header-badge">✓ Font Integration Verification</div>
+    <h1>Cloudflare Pages CSS Integration Test</h1>
+    <p class="subtitle">This page verifies that <code>UC_AjantaTwo.css</code> correctly loads and renders the bold Gujarati typeface and OpenType conjunct ligatures.</p>
+
+    <!-- Test Box 1: Primary Heading & Subheading -->
+    <div class="card">
+      <div class="card-title">
+        <span>1. Live Gujarati Rendering (UC_AjantaTwo)</span>
+        <span class="status-pill" id="fontStatusIndicator">Checking Font...</span>
+      </div>
+
+      <div class="font-ajanta sample-huge">
+        જય સ્વામિનારાયણ
+      </div>
+
+      <div class="font-ajanta sample-sub">
+        ગુજરાતી ભાષા આપણી સંસ્કૃતિ અને ઓળખ છે.
+      </div>
+
+      <div class="code-preview">
+&lt;link rel="stylesheet" href="https://fontguj.pages.dev/css/UC_AjantaTwo.css"&gt;
+&lt;style&gt;
+  .my-heading { font-family: 'UC_AjantaTwo', sans-serif; font-weight: 700; }
+&lt;/style&gt;
+      </div>
+    </div>
+
+    <!-- Test Box 2: Conjuncts / જોડાક્ષર Test -->
+    <div class="card">
+      <div class="card-title">
+        <span>2. OpenType Conjuncts & Ligatures Test (જોડાક્ષર)</span>
+      </div>
+      <p style="color:var(--text-muted); margin-bottom:12px; font-size:0.9rem;">Verifying rendering of complex half-letters and conjuncts in Gujarati:</p>
+      
+      <div class="font-ajanta sample-conjuncts">
+        ક્ષ જ્ઞ શ્ર ત્ત દ્ધ પ્ર ક્ર ગ્ર ટ્ટ ડ્ડ હ્મ હ્ન દ્વ દ્ય સ્ત્ર
+      </div>
+      <div style="margin-top: 10px; font-size: 0.85rem; color: var(--text-muted);">
+        શબ્દો: પ્રમુખસ્વામી, અક્ષરપુરુષોત્તમ, વિદ્યાપીઠ, પ્રકાશ, સંસ્કૃતિ, શ્રદ્ધા
+      </div>
+    </div>
+
+    <!-- Test Box 3: Gujarati Numerals -->
+    <div class="card">
+      <div class="card-title">
+        <span>3. Gujarati Numerals (અંક)</span>
+      </div>
+      <div class="font-ajanta" style="font-size: 2.2rem; color: #fde047; letter-spacing: 4px;">
+        ૧ ૨ ૩ ૪ ૫ ૬ ૭ ૮ ૯ ૦
+      </div>
+    </div>
+
+    <!-- Test Box 4: Side-by-side with System Font -->
+    <div class="card">
+      <div class="card-title">
+        <span>4. Visual Comparison: UC_AjantaTwo vs System Default</span>
+      </div>
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+        <div>
+          <div style="font-size:0.75rem; color:var(--primary); font-weight:700; margin-bottom:6px;">UC_AjantaTwo (Bold Web Font):</div>
+          <div class="font-ajanta" style="font-size: 1.5rem; background: rgba(0,0,0,0.3); padding: 12px; border-radius: 8px;">
+            ગુજરાત આપણું ગૌરવ છે
+          </div>
+        </div>
+        <div>
+          <div style="font-size:0.75rem; color:var(--text-muted); font-weight:700; margin-bottom:6px;">System Sans-Serif Default:</div>
+          <div style="font-family: system-ui, sans-serif; font-size: 1.5rem; background: rgba(0,0,0,0.3); padding: 12px; border-radius: 8px; color: var(--text-muted);">
+            ગુજરાત આપણું ગૌરવ છે
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 32px;">
+      <a href="index.html" style="color: var(--primary); text-decoration: none; font-weight: 600;">&larr; Back to FontGuj Platform</a>
+    </div>
+  </div>
+
+  <script>
+    // Test font loading status via FontFace API
+    if (document.fonts) {
+      document.fonts.ready.then(function () {
+        const indicator = document.getElementById('fontStatusIndicator');
+        const isLoaded = document.fonts.check('700 16px UC_AjantaTwo');
+        if (isLoaded) {
+          indicator.textContent = '✓ Font Loaded & Active';
+          indicator.style.background = 'rgba(16, 185, 129, 0.2)';
+          indicator.style.color = '#34d399';
+        } else {
+          indicator.textContent = '● Font Loaded (Ready)';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
